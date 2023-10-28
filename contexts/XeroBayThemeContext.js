@@ -12,7 +12,9 @@ const XeroBayThemeContext = createContext();
 
 // Create a provider component for the context
 export const XeroBayThemeProvider = ({ children }) => {
-    const [xeroBayTheme, setXeroBayTheme] = useState(localStorage.getItem('xeroBayTheme') || 'light');
+    const storedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('xeroBayTheme') : null;
+    const initialXeroBayTheme = storedTheme ? storedTheme : 'light';
+    const [xeroBayTheme, setXeroBayTheme] = useState(initialXeroBayTheme);
 
     // Function to set the xeroBayTheme value
     const setTheme = (value) => {
@@ -26,6 +28,7 @@ export const XeroBayThemeProvider = ({ children }) => {
         </XeroBayThemeContext.Provider>
     );
 };
+
 
 // Custom hook to easily access the context
 export const useXeroBayTheme = () => {
