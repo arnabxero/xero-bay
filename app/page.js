@@ -1,8 +1,15 @@
+'use client'
 import React from 'react'
+import { useXeroBayTheme } from '@/contexts/XeroBayThemeContext'
+
 
 const page = () => {
+
+  const { xeroBayTheme } = useXeroBayTheme();
+  const isDark = (xeroBayTheme === "dark");
+
   return (
-    <div>MiddleWare Test</div>
+    <div className={`${isDark ? 'dark-1' : 'light-1'}`}>Xero Bay</div>
   )
 }
 
