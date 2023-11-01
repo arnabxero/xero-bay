@@ -4,7 +4,8 @@ import ThemeSelector from '@/components/ThemeSelector'
 
 const page = () => {
   return (
-    <div>page
+    <div>
+      https://daisyui.com/docs/themes/
       <ThemeSelector />
     </div>
   )
