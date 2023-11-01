@@ -6,6 +6,7 @@ const page = () => {
   return (
     <div>
       https://daisyui.com/docs/themes/
+      Used DaisyUI components
       <ThemeSelector />
     </div>
   )
