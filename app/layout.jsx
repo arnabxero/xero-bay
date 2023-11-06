@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider>
         <body className={inter.className}>
-          <div className='font-extrabold'>
+          <div className=''>
             {children}
           </div>
         </body>
